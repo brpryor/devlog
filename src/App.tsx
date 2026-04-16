@@ -1,9 +1,10 @@
 import { Routes, Route, useNavigate } from 'react-router-dom'
 import { useState } from 'react'
-import seedEntries from './data/entries'
 import type { Entry, Mood } from './data/entries'
+import { seedEntries } from './data/entries'
 import About from './pages/About'
 import Home from './pages/Home'
+import Projects from './pages/Projects'
 import NewEntryForm from './components/NewEntryForm'
 import Entries from './pages/Entries'
 
@@ -33,15 +34,13 @@ export default function App() {
   return (
     <Routes>
       <Route path="/" element={<Home />} />
+      <Route path="/about" element={<About />} />
+      <Route path="/projects" element={<Projects />} />
+      <Route path="/entries" element={<Entries entries={entries} />} />
       <Route
         path="/entries/new"
         element={<NewEntryForm onAddEntry={handleAddEntry} />}
       />
-      <Route
-        path="/entries"
-        element={<Entries entries={entries} />}
-      />
-      <Route path="/about" element={<About />} />
     </Routes>
   )
 }

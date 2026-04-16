@@ -1,4 +1,3 @@
-import { Link } from 'react-router-dom'
 import Header from '../components/Header'
 
 export default function Home() {
@@ -17,25 +16,19 @@ export default function Home() {
         <div className="window-body">
           <Header />
 
-          <div className="nav-row">
-            <Link className="win-link" to="/about">
-              About
-            </Link>
-            <Link className="win-link" to="/entries">
-              Entries
-            </Link>
-            <Link className="win-link" to="/entries/new">
-              New Entry
-            </Link>
-          </div>
-
           <main>
             <section>
               <h2>Welcome</h2>
-              <p>This is the Home page of my DevLog.</p>
               <p>
-                Track your coding progress, moods, tags, and notes in a retro
-                Windows-inspired journal.
+                Hello, I’m Brandon Pryor — a CompTIA A+ certified IT Support
+                Specialist with a growing background in troubleshooting,
+                technical support, and development.
+              </p>
+              <p>
+                This site is a space where I share my projects, document my
+                learning journey, and highlight the skills I am continuing to
+                build as I work toward opportunities in IT support and help desk
+                roles.
               </p>
             </section>
           </main>

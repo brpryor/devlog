@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom'
+
 function Header() {
   return (
     <header className="window header-window">
@@ -11,12 +13,25 @@ function Header() {
       </div>
 
       <div className="window-body header-body">
-        <img
-          src="/profile.jpg"
-          alt="Profile"
-          className="profile-pic"
-        />
-        <h1 className="app-title">DevLog</h1>
+        <h1 className="app-title">DevLog & Portfolio</h1>
+
+        <div className="nav-row">
+          <Link className="win-link" to="/">
+            Home
+          </Link>
+          <Link className="win-link" to="/about">
+            About
+          </Link>
+          <Link className="win-link" to="/entries">
+            Entries
+          </Link>
+          <Link className="win-link" to="/entries/new">
+            New Entry
+          </Link>
+          <Link className="win-link" to="/projects">
+            Projects
+          </Link>
+        </div>
       </div>
     </header>
   )

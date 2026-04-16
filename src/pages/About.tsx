@@ -1,8 +1,6 @@
-import { Link } from 'react-router-dom'
 import Header from '../components/Header'
-import Footer from '../components/Footer'
 
-function About() {
+export default function About() {
   return (
     <div className="app-shell">
       <div className="window">
@@ -18,35 +16,64 @@ function About() {
         <div className="window-body">
           <Header />
 
-          <div className="nav-row">
-            <Link className="win-link" to="/">
-              Home
-            </Link>
-            <Link className="win-link" to="/entries">
-              Entries
-            </Link>
-            <Link className="win-link" to="/entries/new">
-              New Entry
-            </Link>
-          </div>
-
           <main>
-            <h2>About Me</h2>
-            <p>
-              I am a passionate developer building web applications with React
-              and TypeScript.
-            </p>
-            <p>
-              This DevLog project tracks entries with moods, tags, and timestamps
-              in a retro Y2K Windows-style interface.
-            </p>
-          </main>
+            <section className="about-section">
+              <img
+                src={`${import.meta.env.BASE_URL}profile.JPG`}
+                alt="Brandon Pryor"
+                className="about-image"
+              />
 
-          <Footer />
+              <h2>Who I Am</h2>
+
+              <p>
+                I am a CompTIA A+ certified IT Support Specialist with hands-on
+                experience in troubleshooting hardware and software issues,
+                supporting end users, and working with modern IT systems.
+              </p>
+
+              <p>
+                Through programs like i.c.stars and Per Scholas, I have developed
+                practical experience in IT support, system troubleshooting, and
+                technical project work. I am passionate about solving technical
+                problems, improving user experiences, and continuously growing my
+                technical skillset.
+              </p>
+
+              <p>
+                I am currently seeking opportunities in IT Support or Help Desk
+                roles where I can contribute, learn, and grow into more advanced
+                technical positions.
+              </p>
+
+              {/* 👇 NEW SECTION */}
+              <section className="connect-section">
+                <h2>Connect</h2>
+
+                <div className="external-links">
+                  <a
+                    className="win-link"
+                    href="https://github.com/brpryor"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    GitHub
+                  </a>
+
+                  <a
+                    className="win-link"
+                    href="https://www.linkedin.com/in/brandon-pryor/"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    LinkedIn
+                  </a>
+                </div>
+              </section>
+            </section>
+          </main>
         </div>
       </div>
     </div>
   )
 }
-
-export default About
